@@ -68,6 +68,7 @@ $("선택자").one({}); //on : only one
         });
     });
 
+/*
 //each() 메소드 실무적용
 // .main-btn 버튼 6개 배열 자동화(0~5)
 $(".main-btn").each(); //1 : each()만 입력함
@@ -75,6 +76,7 @@ $(".main-btn").each(function(){}); //2 : each의 callback function
 $(".main-btn").each(function(){ 
     
 }); //3 :콜백 함수 공간 확보
+
 $(".main-btn").each(function(index){
                           // 👆 = eq
 
@@ -92,7 +94,7 @@ $(".main-btn").each(function(index){
         }
     });
 }); //5 : click 이벤트 리스너, 조건문 핸들러(수행) 콜백
-
+*/
 
 
 

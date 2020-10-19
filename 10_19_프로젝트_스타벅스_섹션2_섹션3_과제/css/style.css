@@ -111,8 +111,10 @@
 #wrap #main #section2 > ul > li:nth-child(1) .left-wrap .left-title {width:65px;height:17px;}
 #wrap #main #section2 > ul > li:nth-child(1) .left-wrap .left-title > img {width:65px;height:18px;}
 
-#wrap #main #section2 > ul > li:nth-child(1) .left-wrap .left-notice {position:absolute;top:0;left:480px;width:400px;}
-#wrap #main #section2 > ul > li:nth-child(1) .left-wrap .left-notice > li {width:100%;}
+#wrap #main #section2 > ul > li:nth-child(1) .left-wrap .left-notice {position:absolute;;top:0;left:220px;width:400px;height:62px;overflow:hidden;}
+#wrap #main #section2 > ul > li:nth-child(1) .left-wrap .left-notice > li {height:62px;z-index:1;position:relative;}
+#wrap #main #section2 > ul > li:nth-child(1) .left-wrap .left-notice > li:nth-child(1) {z-index:2;position:absolute;top:0;}
+#wrap #main #section2 > ul > li:nth-child(1) .left-wrap .left-notice > li:nth-child(2) {z-index:3;position:absolute;top:24px;}
 #wrap #main #section2 > ul > li:nth-child(1) .left-wrap .left-notice > li > a {display:block;font-size:13px;line-height:62px;color:#fff;font-weight:600;}
 
 #wrap #main #section2 > ul > li:nth-child(1) .left-wrap .left-notice-btn {position:absolute;top:0;right:-62px;width:62px;height:62px;background:#000;}
@@ -121,9 +123,9 @@
 
 #wrap #main #section2 > ul > li:nth-child(2) {z-index:1;position:relative;background:#f6f5ef;}
 #wrap #main #section2 > ul > li:nth-child(2) .right-wrap {width:485px;height:62px;line-height:62px;}
-#wrap #main #section2 > ul > li:nth-child(2) .right-wrap .right-title {position:absolute;top:0;right:110px;width:550px;}
+#wrap #main #section2 > ul > li:nth-child(2) .right-wrap .right-title {position:absolute;top:0;right:0;width:550px;}
 #wrap #main #section2 > ul > li:nth-child(2) .right-wrap .right-title > a {display:block;width:234px;line-height:62px;background:url(../img/btn_prom_down.png) no-repeat 100% 50%;}
-#wrap #main #section2 > ul > li:nth-child(2) .right-wrap .right-title > a.addUp {background:url(../img/btn_prom_up.png)}
+#wrap #main #section2 > ul > li:nth-child(2) .right-wrap .right-title > a.addUp {background-image:url(../img/btn_prom_up.png);}
 #wrap #main #section2 > ul > li:nth-child(2) .right-wrap .right-title > a > img {width:129px;height:17px;}
 
 
