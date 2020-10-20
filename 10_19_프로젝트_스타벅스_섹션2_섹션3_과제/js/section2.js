@@ -15,14 +15,14 @@
         }
 
         $(".left-notice li").stop().animate({top:24},0).css({zIndex:2});
-        // .left-notice > li {height:62px;z-index:2;position:absolute;}
+        // .left-notice > li {height:62px;z-index:2;position:absolute;top:24px;}
         $(".left-notice li").eq(cnt<0? 4:cnt).stop().animate({top:0},0).css({zIndex:1});
-        // .left-notice > li:nth-child(1) {z-index:1;top:0;}
-        $(".left-notice li").eq(cnt+1).stop().animate({top:24},0).animate({top:0},800).css({zIndex:3});
+        // left-notice > li:nth-child(1) {z-index:1;position:absolute;top:0;}
+        $(".left-notice li").eq(cnt+1).stop().animate({top:24},0).animate({top:0},1000).css({zIndex:3});
         // .left-notice > li:nth-child(2) {z-index:3;top:24px;}
     }
 
-    setInterval(rollingTextFn, 2500);
+      setInterval(rollingTextFn, 2500);
 
 //section3 slide-bg
     $(".promotion-btn").on({

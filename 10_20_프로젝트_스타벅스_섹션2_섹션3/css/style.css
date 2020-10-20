@@ -105,28 +105,29 @@
 #wrap #main #section2 {width:100%;}
 #wrap #main #section2 > ul {width:100%;} /* > = 절대경로 */
 #wrap #main #section2 > ul > li {float:left;width:50%;height:62px;} /* 박스블록은 높이가 없으면 사각형이 안되니까 브라우저에 안나옴 */
-#wrap #main #section2 > ul > li:nth-child(1) {z-index:2;position:relative;background:#000;}
+#wrap #main #section2 > ul > li:nth-child(1) {position:relative;z-index:2;background:#000;}
+#wrap #main #section2 > ul > li:nth-child(1) .left-wrap {position:relative;float:right;width:550px;height:62px;} 
+/* #wrap #main #section2 > ul > li:nth-child(1) .left-wrap {float:right;width:550px;height:62px;background:#cc9;}  */
+#wrap #main #section2 > ul > li:nth-child(1) .left-wrap .notice-title {line-height:62px;vertical-align:middle;}
+#wrap #main #section2 > ul > li:nth-child(1) .left-wrap .notice-title > img {width:65px;}
 
-#wrap #main #section2 > ul > li:nth-child(1) .left-wrap {width:615px;height:62px;line-height:62px;position:absolute;top:0;left:300px;}
-#wrap #main #section2 > ul > li:nth-child(1) .left-wrap .left-title {width:65px;height:17px;}
-#wrap #main #section2 > ul > li:nth-child(1) .left-wrap .left-title > img {width:65px;height:18px;}
+#wrap #main #section2 > ul > li:nth-child(1) .left-wrap .notice-list {position:absolute;left:80px;top:19px;width:400px;height:24px;overflow:hidden;}/* height 지정후 overflow하면 높이만 보이고 나머지 가려짐 */
+#wrap #main #section2 > ul > li:nth-child(1) .left-wrap .notice-list > li {z-index:2;width:100%;height:24px;position:absolute;left:0;/*부모에서 다시 자리값을 잡아주는거니까 0*/top:24px;} /* 부모영역에 높이가 있어야 자식이 abs일때 화면에 보여짐 */
+#wrap #main #section2 > ul > li:nth-child(1) .left-wrap .notice-list > li:nth-child(1) {z-index:1;top:0;}
+/* #wrap #main #section2 > ul > li:nth-child(1) .left-wrap .notice-list > li:nth-child(2) {z-index:3;top:24px;} */
+#wrap #main #section2 > ul > li:nth-child(1) .left-wrap .notice-list > li > a {display:block;padding:5px 0;background:#000;font-size:14px;color:#fff;}/* a링크만 cursor되어야됨 */
 
-#wrap #main #section2 > ul > li:nth-child(1) .left-wrap .left-notice {position:absolute;top:19px;left:100px;width:400px;height:24px;}
-#wrap #main #section2 > ul > li:nth-child(1) .left-wrap .left-notice > li {z-index:2;position:absolute;height:24px;top:24px;left:0;}
-#wrap #main #section2 > ul > li:nth-child(1) .left-wrap .left-notice > li:nth-child(1) {z-index:1;top:0;left:0;}
-/* #wrap #main #section2 > ul > li:nth-child(1) .left-wrap .left-notice > li:nth-child(2) {z-index:3;top:24;} */
-#wrap #main #section2 > ul > li:nth-child(1) .left-wrap .left-notice > li > a {display:block;font-size:13px;line-height:62px;color:#fff;font-weight:600;}
+#wrap #main #section2 > ul > li:nth-child(1) .left-wrap .notice-more {position:absolute;right:-62px;top:0;width:62px;height:62px;background:#000;line-height:62px;}
+#wrap #main #section2 > ul > li:nth-child(1) .left-wrap .notice-more > a {display:inline-block;}/* margin-top:13px; 써도 됨 */
+#wrap #main #section2 > ul > li:nth-child(1) .left-wrap .notice-more > a > img {width:36px;height:36px;}
 
-#wrap #main #section2 > ul > li:nth-child(1) .left-wrap .left-notice-btn {position:absolute;top:0;right:-62px;width:62px;height:62px;background:#000;}
-#wrap #main #section2 > ul > li:nth-child(1) .left-wrap .left-notice-btn > a {display:inline-block;}
-#wrap #main #section2 > ul > li:nth-child(1) .left-wrap .left-notice-btn > a > img {width:36px;height:36px;}
 
-#wrap #main #section2 > ul > li:nth-child(2) {z-index:1;position:relative;background:#f6f5ef;}
-#wrap #main #section2 > ul > li:nth-child(2) .right-wrap {width:485px;height:62px;line-height:62px;}
-#wrap #main #section2 > ul > li:nth-child(2) .right-wrap .right-title {position:absolute;top:0;right:0;width:550px;}
-#wrap #main #section2 > ul > li:nth-child(2) .right-wrap .right-title > a {display:block;width:234px;line-height:62px;background:url(../img/btn_prom_down.png) no-repeat 100% 50%;}
-#wrap #main #section2 > ul > li:nth-child(2) .right-wrap .right-title > a.addUp {background-image:url(../img/btn_prom_up.png);}
-#wrap #main #section2 > ul > li:nth-child(2) .right-wrap .right-title > a > img {width:129px;height:17px;}
+#wrap #main #section2 > ul > li:nth-child(2) {position:relative;z-index:1;background:#f6f5ef;}
+#wrap #main #section2 > ul > li:nth-child(2) .right-wrap {width:550px;height:62px;text-align:right;}
+#wrap #main #section2 > ul > li:nth-child(2) .right-wrap > h2 {width:234px;height:36px;display:inline-block;margin-top:13px;}
+#wrap #main #section2 > ul > li:nth-child(2) .right-wrap > h2 > a {display:block;width:100%;height:100%;text-align:left;background:url(../img/btn_prom_down.png) no-repeat 100% 50%;}
+#wrap #main #section2 > ul > li:nth-child(2) .right-wrap > h2 > a.addUp {background-image:url(../img/btn_prom_up.png);}
+#wrap #main #section2 > ul > li:nth-child(2) .right-wrap > h2 > a >img {width:129px;height:17px;padding:9.5px 0;}
 
 
 /* section3 */
