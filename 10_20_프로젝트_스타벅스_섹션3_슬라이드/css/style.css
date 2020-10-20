@@ -131,12 +131,12 @@
 
 
 /* section3 */
-#wrap #main #section3 {display:none;width:100%;border-top:1px solid #f6f5ef;background:#f6f5ef;}
+#wrap #main #section3 {/* display:none; */width:100%;border-top:1px solid #f6f5ef;background:#f6f5ef;}
 #wrap #main #section3 .wrap {width:100%;padding:40px 0;}
 
-#wrap #main #section3 .wrap .slide-container {position:relative;width:100%;}
+#wrap #main #section3 .wrap .slide-container {position:relative;width:100%;overflow:hidden;}
 #wrap #main #section3 .wrap .slide-container .slide-view {z-index:2;position:relative;width:829px;margin:0 auto;}
-#wrap #main #section3 .wrap .slide-container .slide-view .slide-wrap {width:/*calc(829px*6) =*/4974px;margin-left:-829px;} /* 819px짜리 슬라이드 6개 들어가니까 */
+#wrap #main #section3 .wrap .slide-container .slide-view .slide-wrap {position:relative;/* left:calc(-829px*3); */width:/*calc(829px*6) =*/4974px;/* margin-left:-829px; */} /* 819px짜리 슬라이드 6개 들어가니까 */
 #wrap #main #section3 .wrap .slide-container .slide-view .slide-wrap .slide {float:left;width:829px;} /* 바깥여백까지 같이 포함된 값을 입력 */
 #wrap #main #section3 .wrap .slide-container .slide-view .slide-wrap .slide > div {position:relative;margin:0 5px;}
 #wrap #main #section3 .wrap .slide-container .slide-view .slide-wrap .slide > div > img {z-index:1;position:relative;width:100%;} /* 만약 이미지가 아니고 텍스트라면 부모높이는 다 잡아줘야됨 */
