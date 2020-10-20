@@ -14,7 +14,7 @@
             cnt = -1;
         }
 
-        $(".left-notice li").stop().animate({top:24},0).css({zIndex:2});
+        $(".left-notice li").stop().animate({top:0},0).css({zIndex:2});
         // .left-notice > li {height:62px;z-index:2;position:absolute;top:24px;}
         $(".left-notice li").eq(cnt<0? 4:cnt).stop().animate({top:0},0).css({zIndex:1});
         // left-notice > li:nth-child(1) {z-index:1;position:absolute;top:0;}

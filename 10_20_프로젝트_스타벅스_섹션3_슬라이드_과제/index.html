@@ -519,61 +519,13 @@
             </ul>
         </section>
 
-        <section id="section3"> 
-            <!-- 
-            메인 슬라이드 분석
-                1. 슬라이드 이미지 4개
-                2. 맨앞에 4개, 맨 뒤에 추가(앞에꺼 부드럽게 하려고) = 6개 롤링
-                3. = 실제로는 4개임 (4 1 2 3 4 1) (4 1 2 3 4 1) (4 1 2 3 4 1) 
-                    ⭐슬라이드 배치
-                        - 정중앙 819
-                        - 해당(Current) 슬라이드(메인) : opacity:1로 설정
-                        - 그 외 슬라이드 : opacity : .5; 
-                        - 우->좌로 이동
-                3. 슬라이드 넓이 819 * 높이 553
-                4. 슬라이드 간의 바깥 여백 0 5px
-                    자세히 보기: 너비 120px 높이 35px border 2px solid #222;
-                5. 이미지 위에다가 자세히보기 버튼(abs->z-index)
-                6. 섹션 <-> 슬라이드 사이 여백 40px
-                7. 좌우버튼 : 50*50 border:2px solid #222; 백그라운드url이용, 섹션안에서 가운데정렬 후 살짝 올리기 
-                8. 페이지버튼 박스 : 정지, 플레이 - 백그라운드 url이용, 버튼크기 :12*12, 인라인블럭으로 사이 간격 margin : 4px
-                                   : 현재버튼 녹색보더, 나머지배경 회색
-            -->
+        <section id="section3">
             <h2 class="hide">섹션</h2>
-            <div class="wrap"> <!-- 슬라이드는 항상 컨뷰렙 -->
-                <div class="slide-container"> <!-- 좌우화살버튼, invigate 버튼 -->
-                    <div class="slide-view"> <!-- 슬라이드 갯수(화면 너비) 고정해줌 -->
-                        <ul class="slide-wrap fixedclear"> <!-- 애니메이션 대상  -->
-                            <!-- <li class="slide-css slide0-js"><div><img src="" alt=""></div></li> -->
-                            <li class="slide slide3"><div><img src="./img/slide_03.jpg" alt="">
-                                                          <span><a href="#" title="자세히 보기">자세히 보기</a></span></div></li>
-                            <li class="slide slide1"><div><img src="./img/slide_00.jpg" alt="">
-                                                          <span><a href="#" title="자세히 보기">자세히 보기</a></span></div></li>
-                            <li class="slide slide2"><div><img src="./img/slide_01.jpg" alt="">
-                                                          <span><a href="#" title="자세히 보기">자세히 보기</a></span></div></li>
-                            <li class="slide slide3"><div><img src="./img/slide_02.jpg" alt="">
-                                                          <span><a href="#" title="자세히 보기">자세히 보기</a></span></div></li>
-                            <li class="slide slide4"><div><img src="./img/slide_03.jpg" alt="">
-                                                          <span><a href="#" title="자세히 보기">자세히 보기</a></span></div></li>
-                            <li class="slide slide1"><div><img src="./img/slide_00.jpg" alt="">
-                                                          <span><a href="#" title="자세히 보기">자세히 보기</a></span></div></li>
-                        </ul>
-                    </div>
-                    <!-- 좌우 화살버튼-->
-                    <span class="next-btn-wrap"><a href="javascript:void(0);" class="next-btn" title="Next Button">Next Button</a></span>
-                    <span class="prev-btn-wrap"><a href="javascript:void(0);" class="prev-btn" title="Preview Button">Preview Button</a></span>
-                    <!-- 페이지버튼(indigate) -->
-                    <ul class="page-btn-wrap">
-                        <li><div><a href="javascript:void(0);" class="pause-play-btn" title="Pause Play Button" >Pause Play Button</a></div></li>
-                        <li><div><a href="javascript:void(0);" class="page-btn" title="Page0 Button" >Page0 Button</a></div></li>
-                        <li><div><a href="javascript:void(0);" class="page-btn" title="Page1 Button" >Page1 Button</a></div></li>
-                        <li><div><a href="javascript:void(0);" class="page-btn" title="Page2 Button" >Page2 Button</a></div></li>
-                        <li><div><a href="javascript:void(0);" class="page-btn" title="Page3 Button" >Page3 Button</a></div></li>
-                    </ul>
-                </div>
+            <div class="wrap">
+                
             </div>
-        </section>
 
+        </section>
         <section id="section4">
             <h2 class="hide">섹션</h2>
 
