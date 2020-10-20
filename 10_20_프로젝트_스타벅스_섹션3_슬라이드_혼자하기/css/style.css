@@ -130,17 +130,18 @@
 
 
 /* section3 */
-#wrap #main #section3 {display:none;width:100%;border-top:1px solid #f6f5ef;background:#f6f5ef;}
+#wrap #main #section3 {display:block;width:100%;border-top:1px solid #f6f5ef;background:#f6f5ef;}
 #wrap #main #section3 .wrap {width:100%;padding:40px 0;}
-#wrap #main #section3 .wrap .slide-container {position:relative;width:100%;}
-#wrap #main #section3 .wrap .slide-container .slide-view {position:relative;z-index:1;width:100%;}
-#wrap #main #section3 .wrap .slide-container .slide-view .slide-wrap {width:calc(819px*5);margin-left:-290px;}
+
+#wrap #main #section3 .wrap .slide-container {position:relative;width:100%;overflow:hidden;}
+#wrap #main #section3 .wrap .slide-container .slide-view {position:relative;z-index:2;width:829px;margin:0 auto;}/* 넒이가 829여야지 container보다 작으니까 그 안에서 가운데 정렬이 됨. */
+#wrap #main #section3 .wrap .slide-container .slide-view .slide-wrap {position:relative;width:calc(829px*5);left:calc(-829px*2);}
 #wrap #main #section3 .wrap .slide-container .slide-view .slide-wrap .slide {float:left;width:829px;margin:0 5px;}
-#wrap #main #section3 .wrap .slide-container .slide-view .slide-wrap .slide > div {position:relative;width:100%;margin:0 auto;}
+#wrap #main #section3 .wrap .slide-container .slide-view .slide-wrap .slide > div {position:relative;width:100%;}
 #wrap #main #section3 .wrap .slide-container .slide-view .slide-wrap .slide > div > img {position:relative;z-index:1;width:819px;}
 
-#wrap #main #section3 .wrap .slide-container .slide-view .slide-wrap .slide > div .slide-more {position:absolute;z-index:2;bottom:20px;left:40%;width:121px;height:34px;border:2px solid #222;margin:0 auto;}
-#wrap #main #section3 .wrap .slide-container .slide-view .slide-wrap .slide > div .slide-more > a {display:block;line-height:34px;font-size:13px;text-align:center;}
+#wrap #main #section3 .wrap .slide-container .slide-view .slide-wrap .slide > div .slide-more {position:absolute;z-index:2;bottom:20px;left:40%;width:121px;height:34px;margin:0 auto;}
+#wrap #main #section3 .wrap .slide-container .slide-view .slide-wrap .slide > div .slide-more > a {display:block;line-height:34px;font-size:13px;text-align:center;border:2px solid #222;}
 #wrap #main #section3 .wrap .slide-container .slide-view .slide-wrap .slide > div .slide-more > a:hover {background:#222;color:#fff;text-decoration:underline;}
 #wrap #main #section3 .wrap .slide-container .slide-view .slide-wrap .slide > div .slide-more > a:focus {background:#222;color:#fff;text-decoration:underline;}
 

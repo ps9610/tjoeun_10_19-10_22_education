@@ -8,7 +8,7 @@
 //  3. 메인 함수( mainSlideFn() ) 만들기
 //  4. 카운트 함수( nextSlideCountFn() ) 호출해보기 -> 5번
 //  5. 다음 화살 버튼 클릭 이벤트로 카운트 함수 호출하게 만들기
-    var cnt = 0;// 전역변수, 즉시실행함수 어디든지 쓸 수 있음
+var cnt = 0;// 전역변수, 즉시실행함수 어디든지 쓸 수 있음
 
 //2-1. next
     function nextSlideCountFn(){
