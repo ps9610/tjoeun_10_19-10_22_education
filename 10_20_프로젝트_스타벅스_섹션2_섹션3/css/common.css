@@ -11,6 +11,8 @@ a {color: #444; text-decoration: none;}
 img {vertical-align:middle;}
 .fixedclear:after {content: "";display:block;clear:both;} /* floating hack */
 .hide {display: none;}
+.blind{display:block;text-indent:-2000px;overflow:hidden;}/*text-indent는 블럭요소일때만 가능*/
+
 
 /* skip */
 #skip {z-index:2;position:absolute;top:0;left:0;width:100%;}
