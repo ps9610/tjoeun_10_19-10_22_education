@@ -525,23 +525,27 @@
                 <div class="slide-container">
                     <div class="slide-view ">
                         <ul class="slide-wrap fixedclear">
-                            <li class="slide slide0"><div><img src="./img/slide_00.jpg" alt="슬라이드1"></div></li>
-                            <li class="slide slide1"><div><img src="./img/slide_02.jpg" alt="슬라이드2"></div></li>
-                            <li class="slide slide2"><div><img src="./img/slide_03.jpg" alt="슬라이드3"></div></li>
-                            <li class="slide slide3"><div><img src="./img/slide_00.jpg" alt="슬라이드4"></div></li>
-                        </ul>
-                        <!-- 1. 좌우버튼 -->
-                        <span class="left-btn-wrap"><a href="javascript:void(0)" class="left-btn" title="이전버튼">left Button</a></span>
-                        <span class="right-btn-wrap"><a href="javascript:void(0)" class=right-btn" title="다음버튼">Right Button</a></span>
-                        <!-- 2. 플레이버튼 -->
-                        <ul>
-                            <li><div><a href="javascript:void(0)" class="pause-btn" title="일시정지버튼">pause</a></div></li>
-                            <li><div><a href="javascript:void(0)" class="play-btn" title="재생버튼">play</a></div></li>
-                            <li><div><a href="javascript:void(0)" class="play-btn" title="재생버튼">play0</a></div></li>
-                            <li><div><a href="javascript:void(0)" class="play-btn" title="재생버튼">play1</a></div></li>
-                            <li><div><a href="javascript:void(0)" class="play-btn" title="재생버튼">play2</a></div></li>
+                            <li class="slide slide0"><div><img src="./img/slide_00.jpg" alt="슬라이드1">
+                                                          <span class="slide-more"><a href="#" class="slide-more-btn" title="자세히 보기">자세히 보기</a></span></div></li>
+                            <li class="slide slide1"><div><img src="./img/slide_02.jpg" alt="슬라이드2">
+                                                          <span class="slide-more"><a href="#" class="slide-more-btn" title="자세히 보기">자세히 보기</a></span></div></li>
+                            <li class="slide slide2"><div><img src="./img/slide_03.jpg" alt="슬라이드3">
+                                                          <span class="slide-more"><a href="#" class="slide-more-btn" title="자세히 보기">자세히 보기</a></span></div></li>
+                            <li class="slide slide3"><div><img src="./img/slide_00.jpg" alt="슬라이드4">
+                                                          <span class="slide-more"><a href="#" class="slide-more-btn" title="자세히 보기">자세히 보기</a></span></div></li>
                         </ul>
                     </div>
+                        <!-- 1. 좌우버튼 -->
+                        <span class="left-btn-wrap"><a href="javascript:void(0)" class="left-btn blind" title="이전버튼">left Button</a></span>
+                        <span class="right-btn-wrap"><a href="javascript:void(0)" class="right-btn blind" title="다음버튼">Right Button</a></span>
+                        <!-- 2. 플레이버튼 -->
+                        <ul class="page-btn-wrap">
+                            <li><div><a href="javascript:void(0)" class="pause-btn blind" title="일시정지버튼">pause</a></div></li>
+                            <li><div><a href="javascript:void(0)" class="play-btn blind addStopbtn" title="재생버튼">play</a></div></li>
+                            <li><div><a href="javascript:void(0)" class="play-btn blind" title="재생버튼">page0</a></div></li>
+                            <li><div><a href="javascript:void(0)" class="play-btn blind" title="재생버튼">page1</a></div></li>
+                            <li><div><a href="javascript:void(0)" class="play-btn blind" title="재생버튼">page2</a></div></li>
+                        </ul>
                 </div>
             </div>
         </section>
