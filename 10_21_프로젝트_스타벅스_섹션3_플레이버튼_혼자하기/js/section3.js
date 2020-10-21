@@ -64,12 +64,12 @@ var setId = 0;
     //5-1-1. eq 버튼들한테 클릭 이벤트 걸기
     //5-1-2. 메인 슬라이드 함수 넣기 
 
-    $(".page-btn").eq(0).on({
-        click:function(){
-            cnt=0;
-            mainSlideFn();
-        }
-    });
+$(".page-btn").eq(0).on({
+    click:function(){
+        cnt=0;
+        mainSlideFn();
+    }
+});
 
 $(".page-btn").eq(1).on({
     click:function(){
