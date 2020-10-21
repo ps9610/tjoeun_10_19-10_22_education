@@ -19,7 +19,8 @@ var setId = 0;
             }
             $(".slide-wrap").stop().animate({ left : -829 * cnt },0); //✅ 초기화 시켜주는 이유 : 앞으로 돌아가지 않고 바로 이어지게 해주려고
         });
-        pageBtnFn(cnt);
+        pageBtnFn(cnt); // 새로운 전역변수를 만들면 함수 바로 위에서 변수 써줌 -> 그래야 실행됨
+                        // 어차피 전역변수를 만들어도 cnt값이랑 똑같으니까 cnt써줌(전역변수라 써도 됨)
     }
 
     function nextSlideFn(){
@@ -124,7 +125,7 @@ function pageBtnFn(btnCnt) {
 // 8-1. 3초 간격으로 nextslide가 와야됨 
 // 8-2. setInterval를 불러줄 함수 timerFn를 만듦
 // 8-3. ✅ 전역변수 setId를 만든 이유 : console.log
-            // -> setId에 0을 안넣고 바로 setInterval값이 변수로 오게 하면?
+            // -> setInterval은 컴퓨터 전체에서 실행되는거라서 꼭 전역변수 세팅해주어야함
 
 function timerFn() {
     setId = setInterval(nextSlideFn,3000);
@@ -145,7 +146,7 @@ $(".pause-play-btn").on({
         if(t == 0){
             t = 1;
             $(this).addClass("addPlayBtn");
-            clearInterval(setId); //✅ 해당 번호에 맞는 setInterval를 clear해라
+            clearInterval(setId);
         }
         else if (t == 1){
             t = 0;
