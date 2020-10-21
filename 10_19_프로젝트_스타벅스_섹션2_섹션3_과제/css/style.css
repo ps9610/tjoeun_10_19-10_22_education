@@ -107,24 +107,27 @@
 #wrap #main #section2 > ul > li {float:left;width:50%;height:62px;} /* 박스블록은 높이가 없으면 사각형이 안되니까 브라우저에 안나옴 */
 #wrap #main #section2 > ul > li:nth-child(1) {z-index:2;position:relative;background:#000;}
 
-#wrap #main #section2 > ul > li:nth-child(1) .left-wrap {position:relative;width:100%;height:100%;}
+#wrap #main #section2 > ul > li:nth-child(1) .left-wrap {position:relative;left:400px;width:100%;height:100%;}
 #wrap #main #section2 > ul > li:nth-child(1) .left-wrap .left-title {float:left;width:65px;height:100%;}
 #wrap #main #section2 > ul > li:nth-child(1) .left-wrap .left-title > img {display:block;width:100%;height:17px;margin-top:22.5px;}
 
 #wrap #main #section2 > ul > li:nth-child(1) .left-wrap .left-notice {float:left;}
 #wrap #main #section2 > ul > li:nth-child(1) .left-wrap .left-notice > li {padding-left:40px;}
-#wrap #main #section2 > ul > li:nth-child(1) .left-wrap .left-notice > li > a {display:block;color:#fff;}
+#wrap #main #section2 > ul > li:nth-child(1) .left-wrap .left-notice > li > a {display:block;color:#fff;font-size:14px;}
 
-#wrap #main #section2 > ul > li:nth-child(1) .left-wrap .left-notice-btn {float:left;position:relative;left:470px;} 
+#wrap #main #section2 > ul > li:nth-child(1) .left-wrap .left-notice-btn {float:left;position:relative;left:75px;} 
 #wrap #main #section2 > ul > li:nth-child(1) .left-wrap .left-notice-btn > a {display:inline-block;width:36px;height:36px;padding-top:13px;}
 #wrap #main #section2 > ul > li:nth-child(1) .left-wrap .left-notice-btn > a > img {width:100%;height:100%;}
 
 #wrap #main #section2 > ul > li:nth-child(2) {z-index:1;position:relative;background:#f6f5ef;}
-#wrap #main #section2 > ul > li:nth-child(2) .right-wrap 
-#wrap #main #section2 > ul > li:nth-child(2) .right-wrap .right-title 
-#wrap #main #section2 > ul > li:nth-child(2) .right-wrap .right-title > a 
+#wrap #main #section2 > ul > li:nth-child(2) .right-wrap {}
+#wrap #main #section2 > ul > li:nth-child(2) .right-wrap .right-title > a {display:block;width:129px;height:17px;}
 #wrap #main #section2 > ul > li:nth-child(2) .right-wrap .right-title > a.addUp 
-#wrap #main #section2 > ul > li:nth-child(2) .right-wrap .right-title > a > img
+#wrap #main #section2 > ul > li:nth-child(2) .right-wrap .right-title > a > img{width:100%;height:100%;}
+
+#wrap #main #section2 > ul > li:nth-child(2) .right-wrap .right-title-btn {float:left;}
+#wrap #main #section2 > ul > li:nth-child(2) .right-wrap .right-title-btn > a {display:block;width:35px;height:35px;}
+#wrap #main #section2 > ul > li:nth-child(2) .right-wrap .right-title-btn > a > img {width:100%;height:100%;}
 
 
 /* section3 */
