@@ -37,14 +37,14 @@
 
 
     //섹션2 프로모션 버튼 클릭 이벤트리스너
-    $(".promotion-btn").on({
-        click:function(e){
-            e.preventDefault();
+    // $(".promotion-btn").on({
+    //     click:function(e){
+    //         e.preventDefault();
 
-            $(this).toggleClass("addUp"); //addUp이라는 요소를 한 번 누르면addclass(속성추가),다시 또 누르면 removeclass(속성삭제)하겠다.
-            $("#section3").stop().slideToggle(400,"easeInCubic"); //animate와 똑같이 버블링 발생할수있음 //toggle만들기(슬라이드 다시 올려야되니까)
-        }
-        });
+    //         $(this).toggleClass("addUp"); //addUp이라는 요소를 한 번 누르면addclass(속성추가),다시 또 누르면 removeclass(속성삭제)하겠다.
+    //         $("#section3").stop().slideToggle(400,"easeInCubic"); //animate와 똑같이 버블링 발생할수있음 //toggle만들기(슬라이드 다시 올려야되니까)
+    //     }
+    //     });
         /* $("#section3").stop().slideToggle(500,function(){
             슬라이드 함수 콜백함수로 넣어주면 됨
         }); */

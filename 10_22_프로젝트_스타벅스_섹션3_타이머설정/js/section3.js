@@ -41,8 +41,9 @@ function prevSlideCountFn(){
                 cnt=3;
             }//넘어왔던거를 맨앞에꺼로 바뀐다고 써주면 됨(만약에 슬라이드 갯수가 앞, 뒤, 가운데로 배수대로 있으면 완전 자연스럽게 연결)
             $(".slide-wrap").stop().animate({ left : -829 * cnt },0); //이동하는 시간 0 = 움직이지 않음 = 순간이동 = 초기화
+            $('.slide').removeClass('addSlide');
+            $('.slide').eq(cnt+1).addClass('addSlide');
         }); //if를 next에서 쓰면 넘어가기 전에 앞에꺼로 바껴서 연결되어 보이지 않음
-
         pageBtnFn(cnt/* >3? 0:cnt 이렇게 쓰기 싫으면 함수에 직접 써*/); /* 일단 cnt가 바뀌고 나서 그 변경된 cnt값이 저장되어야 함수가 실행됨 :페이지버튼(전달인자)*/
         // animate있는 함수랑 pageBtn함수랑 형제라 같은 시간대에 설정됨
         // pageBtn이 콜백함수되면 슬라이드가 돌아가고 나서 한 템포 뒤에(0.6초라는 시간차때문에) 페이지버튼이 색칠됨
@@ -193,11 +194,10 @@ function initTimerFn(){
     setId = setInterval(nextSlideCountFn,3000); //로딩 후 3초 후 실행
     // 컴터 메모리 번호 안에서 동작하는거라 그 번호에 대한 변수있어야 제어가능 -> 전역변수 만들어줌
     // console.log(setId); 
+    //함수로 만들어준 이유 : 저 메모리 번호가 랜덤이라 어떤 숫자가 될지 몰라서 항상 같은 숫자가 대입되라고
 } 
-setTimeout(initTimerFn, 100); //브라우저 키자마자 'seconds'초 뒤에 '함수'를 실행함 
+//setTimeout(initTimerFn, 100); //브라우저 키자마자 'seconds'초 뒤에 '함수'를 실행함 
 //initTimerFn(); : 브라우저 키자마자 바로 실행함, 
-                   //함수로 만들어준 이유 : 저 메모리 번호가 랜덤이라 어떤 숫자가 될지 몰라서 항상 같은 숫자가 대입되라고
-
 
 /*
 //  8-1. 타이머 중지 / 다시 시작 - toggle변수 이용
@@ -235,6 +235,7 @@ $(".pause-play-btn").on({
             
                 if( x ==false ){ // 처음엔 addPlay 클래스가 없으니까 = 현재 재생중인 상태
                     clearInterval(setId);
+                    clearInterval(setId2);
                     $(this).addClass("addPlay");
                 }
                 else if ( x==true ){ //addPlay 클래스 생김 = 현재 일시정지인 상태
@@ -294,6 +295,33 @@ function timerControlFn(){
         },seconds);
 */
 
+        //9
+        // section3을 닫으면(=addUp 클래스가 없다면) 슬라이드가 닫히면서 애니메이션 초기화, 
+        // section3을 열면(=addUp 클래스가 있다면) 슬라이드가 열리면서 처음부터 다시 애니메이션이 동작한다.
+
+    $(".promotion-btn").on({
+        click:function(e){
+            e.preventDefault();
+
+            $(this).toggleClass("addUp"); 
+            $("#section3").stop().slideToggle(400,"easeInCubic"); 
+        
+            if( $(".promotion-btn").hasClass("addUp") ){
+                    initTimerFn(); // 카운트 0 초기화
+                    $(".pause-play-btn").removeClass("addPlay");//플레이정지버튼 초기화
+                }
+            else {
+                clearInterval(setId);//슬라이드 타이머 중지
+                clearInterval(setId2);
+                cnt = 0;
+                $(".slide-wrap").stop().animate({ left:-829*cnt },0);// 리셋
+                $(".slide").removeClass("addSlide");
+                $(".slide").eq(cnt+1).addClass("addSlide"); //opacity 초기화
+                pageBtnFn(cnt); //페이지버튼 초기화
+                $(".pause-play-btn").addClass("addPlay"); //플레이정지버튼 초기화
+            }
+        }
+    });
 
 })(window, document, jQuery);
 

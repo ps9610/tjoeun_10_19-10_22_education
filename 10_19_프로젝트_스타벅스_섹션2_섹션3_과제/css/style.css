@@ -120,7 +120,7 @@
 #wrap #main #section2 > ul > li:nth-child(1) .left-wrap .left-notice-btn > a > img {width:100%;height:100%;}
 
 #wrap #main #section2 > ul > li:nth-child(2) {z-index:1;position:relative;background:#f6f5ef;}
-#wrap #main #section2 > ul > li:nth-child(2) .right-wrap {}
+#wrap #main #section2 > ul > li:nth-child(2) .right-wrap {width:100%;}
 #wrap #main #section2 > ul > li:nth-child(2) .right-wrap .right-title > a {display:block;width:129px;height:17px;}
 #wrap #main #section2 > ul > li:nth-child(2) .right-wrap .right-title > a.addUp 
 #wrap #main #section2 > ul > li:nth-child(2) .right-wrap .right-title > a > img{width:100%;height:100%;}

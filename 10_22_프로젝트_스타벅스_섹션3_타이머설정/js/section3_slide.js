@@ -18,10 +18,12 @@
         //2 메인슬라이드함수
         function mainSlideFn(){
             //1234
-            $('.slide-wrap').stop().animate({ left:-829*cnt }, 600, function(){
+            $('.slide-wrap').stop().animate({ left:-829*cnt }, 400, function(){
                 if(cnt>3){cnt=0;} // 1 2 3 0
                 if(cnt<0){cnt=3;}
-                $('.slide-wrap').stop().animate({ left:-829*cnt },0);//초기화 리셋               
+                $('.slide-wrap').stop().animate({ left:-829*cnt },0);//초기화 리셋  
+                $('.slide').removeClass('addSlide');
+                $('.slide').eq(cnt+1).addClass('addSlide');
             });
             //1234
             pageBtnFn(cnt); //페이지버튼(전달인자) 1 2 3 4
@@ -81,7 +83,7 @@
             var cnt2 = 0;
             setId2 = setInterval(function(){
                 cnt2++;
-                if(cnt2>10){
+                if(cnt2>9){
                     nextSlideCountFn(); //다음슬라이드 즉시 실행
                     initTimerFn();  //3초후 다음 슬라이드 실행
                     clearInterval(setId2); //자신의 타이머 중지
@@ -100,6 +102,7 @@
                     mainSlideFn(); //메인슬라이드 호출
                     clearInterval(setId); //버튼 클릭시 타이머 중지
                     $('.pause-play-btn').addClass('addPlay');
+                    timerControlFn();
                 }
             });
         });
@@ -154,13 +157,11 @@
                     }
                     else if( x==true ){ //현재 중지상태임 ▶ 다시 플레이
                             //nextSlideCountFn(); //++ 다음을 즉시 실행
-                            timerFn();  //플레이
+                            initTimerFn();  //플레이
                             $(this).removeClass('addPlay'); //||
                     }
             }
         });
-
-
 
 
 })(window,document,jQuery);
