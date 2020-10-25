@@ -249,11 +249,11 @@ $(".pause-play-btn").on({
 
 
 ///////////////////            
-// 중지 상태가 얼마동안 유지되는 카운트해서 콜백함수 만들기
+// 중지 상태가 얼마동안 유지되는지 카운트해서 콜백함수 만들기
 // 타이머가 없으면 콜백함수 안됨 -> 시간차주기
-//setTimeout(); // 정해진 시간 뒤에 실행하고 끝
+// setTimeout(); // 정해진 시간 뒤에 실행하고 끝
 // setTimeout(a,1000); = 로딩 1초 후 a 함수 실행하고 중지
-//setInterval(); // 정해진 시간 간격으로 무한히 실행
+// setInterval(); // 정해진 시간 간격으로 무한히 실행
 // setInterval(ab,1000); = 1초 간격으로 ab 함수 실행
 ///////////////////
 
@@ -263,8 +263,8 @@ $(".pause-play-btn").on({
 // 이벤트 핸들러에 추가된 함수
 function timerControlFn(){
         
-//clearInterval = setInterval이 중복해서 계속 카운트되지않고 하나의 setInterval만 실행되게해줌
-    clearInterval(setId); //10번 : 버튼누르면 애니메이션 멈추고 
+//clearInterval = setInterval이 중복해서 계속 카운트 되지않고 하나의 setInterval만 실행되게해줌
+    clearInterval(setId); //10번 : ⏸ 버튼 누르면 애니메이션 멈추고 
     clearInterval(setId2); // 버튼 누르고 시간 멈추게 하기
     $(".pause-play-btn").addClass("addPlay"); // ▶버튼 나옴
         //만약 toggle 변수 사용했으면 t=1; 써서 중지상태임을 알려줘야됨

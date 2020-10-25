@@ -56,7 +56,7 @@ function prevSlideCountFn(){
             }
         clearInterval(setId); //10번
         $(".pause-play-btn").addClass("addPlay");
-        var cnt2 = 0; //몇 초 후에 슬라이드 재생하라 할 때 그 초
+        var cnt2 = 0; //멈춘 후부터 몇 초 후에 다시 슬라이드 재생하라 할 때 그 초
         setId2 = setInterval(function(){
             cnt2++;
             if ( cnt2>9 ){
